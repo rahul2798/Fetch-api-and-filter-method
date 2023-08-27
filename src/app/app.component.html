@@ -1,0 +1,19 @@
+<input [(ngModel)]="searchText" />
+<table>
+  <thead>
+    <tr>
+      <th>USER ID</th>
+      <th>Name</th>
+      <th>UserName</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of users | filter: searchText">
+      <td>{{ item.id }}</td>
+      <td>{{ item.name }}</td>
+      <!-- <td>{{ user.username }}</td>
+      <td>{{ user.email }}</td> -->
+    </tr>
+  </tbody>
+</table>
